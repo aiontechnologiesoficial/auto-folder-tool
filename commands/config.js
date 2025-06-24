@@ -1,4 +1,4 @@
 export default {
-  count: 800,
+  count: 10,
   root: "./",
 };

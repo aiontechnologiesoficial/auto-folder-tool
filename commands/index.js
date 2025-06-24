@@ -2,14 +2,14 @@ import fs from "fs";
 import config from "./config.js";
 const folders = new Array(config.count).fill(1);
 export const handleCreatedFolders = () => {
-  folders.forEach((_, index) => {
-    try {
+  try {
+    folders.forEach((_, index) => {
       fs.mkdir(config.root + (index + 1), () => {});
-      console.log("Las carpetas se crearon con exito ");
-    } catch (err) {
-      console.log(err);
-    }
-  });
+    });
+    console.log("Las carpetas se crearon con exito ");
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const handleDeletefolders = () => {
